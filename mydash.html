@@ -1,0 +1,39 @@
+<script type="text/x-red" data-template-name="mydash-node">
+    <div class="form-row">
+        <label for="node-input-mac"><i class="fa fa-globe"></i> Dash-Button MAC:</label>
+        <input type="text" id="node-input-mac" style="width: 50%;" placeholder="00:11:22:33:44:55">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name:</label>
+        <input type="text" id="node-input-name" style="width: 50%;" placeholder="Dash-Button name...">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="mydash-node">
+    <p>A node-red node for receiving Amazon Dash-Button pressed events.</p>
+    <p>Event contains the following data in the msg object</p>
+    <ul>
+        <li><code>mac</code>The MAC address of the Dash-Button pressed</li>
+        <li><code>time</code>Timestamp of when the Dash-Button has been pressed</li>
+    </ul>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('mydash-node',{
+        category: 'input',
+        color:"rgb(173,255,47)",
+        defaults: {
+            name: {value:""},
+            mac: {value:""},
+        },
+        inputs:0,
+        outputs:1,
+        icon: "white-globe.png",
+        label: function() {
+            return this.name||"Dash-Button";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        },
+    });
+</script>

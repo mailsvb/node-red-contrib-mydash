@@ -1,0 +1,20 @@
+{
+    "author": {
+        "name": "Sven, mailsvb@gmail.com"
+    },
+    "description": "A node-red node for receiving Amazon Dash-Button pressed events",
+    "name": "node-red-contrib-mydash",
+    "keywords": [ "node-red", "dash", "dashbutton", "button", "iot" ],
+    "node-red": {
+        "nodes": {
+            "mydash": "mydash.js"
+        }
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mailsvb/node-red-contrib-mydash.git"
+    },
+    "homepage": "https://github.com/mailsvb/node-red-contrib-mydash#readme",
+    "version": "1.1.0"
+}
